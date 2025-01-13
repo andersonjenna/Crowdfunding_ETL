@@ -12,7 +12,7 @@ Launch pgAmdin 4 and create a "crowdfunding_db" database.
 
 Open the "crowdfunding_db_schema.sql" file in pgAdmin 4.
 
-Run each of the four "Create Table" commands to create the tables within the schema. Import the respective CSV files from the Resources folder in the follwing order:
+Run each of the four "Create Table" commands to create the tables within the schema. Import the respective CSV files from the Resources folder in the following order:
 1. category
 2. subcategory
 3. contacts (CSV file is titled "cleaned_contacts")
