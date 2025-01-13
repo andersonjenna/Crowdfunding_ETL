@@ -43,12 +43,13 @@ CREATE TABLE "campaign" (
     "end_date" DATE   NOT NULL,
     "category_id" VARCHAR   NOT NULL,
     "subcategory_id" VARCHAR   NOT NULL,
-    CONSTRAINT "pk_campaign" PRIMARY KEY (
-        "cf_id"
-     )
+    CONSTRAINT "pk_campaign" PRIMARY KEY ("cf_id"),
+	CONSTRAINT "fk_campaign_contacts" FOREIGN KEY ("contact_id") REFERENCES "contacts"("contact_id"),
+    CONSTRAINT "fk_campaign_category" FOREIGN KEY ("category_id") REFERENCES "category"("category_id"),
+    CONSTRAINT "fk_campaign_subcategory" FOREIGN KEY ("subcategory_id") REFERENCES "subcategory"("subcategory_id")
 );
 
-SELECT * FROM category LIMIT 10;
-SELECT * FROM subcategory LIMIT 10;
-SELECT * FROM contacts LIMIT 10;
-SELECT * FROM campaign LIMIT 10;
+SELECT * FROM category LIMIT 100;
+SELECT * FROM subcategory LIMIT 100;
+SELECT * FROM contacts LIMIT 100;
+SELECT * FROM campaign LIMIT 100;
